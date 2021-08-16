@@ -1,0 +1,78 @@
+<%@page import="web.data.dto.ReviewDTO"%>
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+    pageEncoding="UTF-8"%>
+
+ 
+<style type="text/css">
+.reviews_cont .sort {text-align: right;}
+
+.reviewBtn {
+	width: 136px;
+	height: 40px;
+	border: 1px solid #dadada;
+	text-align: center; 
+	padding-top: 10px;
+	display: inline-block;
+	margin-bottom: 15px;
+}
+.star_img {
+	width:100%;
+	display:block;
+	background:url('https://www.demar3.com/data/skin/front/mime/img/icon/board/icon_star_fill.png') no-repeat left top;
+}
+</style>
+
+    <div class="detail_cont">
+        <div id="reviews" class="reviews_cont">
+            <h3>제품리뷰(<%=reviewList.size()%>)</h3>
+            
+            <div class="sort">
+                <div class="right btn_up reviewBtn">
+                    <a href="<%=request.getContextPath()%>/index.jsp?workgroup=mypage&work=review_write" class="write">
+                    	리뷰 작성하기
+                    </a>
+                </div>
+            </div>
+            <div id="ajax-goods-goodsreview-list">
+            	<%-- start --%>
+	<% if(reviewList.size()!=0) { %>
+	<div class="reviewList2">
+		<% for(int i=0; i<reviewList.size(); i++) { %>
+		<div class="reviewList">
+			<!-- list -->
+			<div class="list head inactive-header" data-bd-id="goodsreview" data-sno="223481" data-auth="y">
+				<div class="div1">
+					<span class="rating_star">
+						<span class="star_img">&nbsp;</span>
+					</span>
+				</div>
+				<div class="div2">
+					<a href="<%=request.getContextPath()%>/index.jsp?workgroup=review&work=review">
+						<span class="s2"><%=reviewList.get(i).getReviewSubject()%></span>
+					</a>
+				</div>
+				<!-- <div class="div3">
+					건성 / 민감성 / 복합성
+				</div> -->
+				<div class="div4"><%=reviewList.get(i).getMemberId().replace("a", "*")%></div>
+				<div class="div5"><%=reviewList.get(i).getReviewDate().substring(0, 10)%></div>
+			</div>
+			<!-- //list -->
+			<!-- view -->
+			<div class="view cont review_cont jReview" style="width: 875px; display: none;">
+				<!-- codefix -->
+				<%=reviewList.get(i).getReviewContext()%>
+				<!-- codefix -->
+			</div>
+			<!-- //view -->
+		</div>
+		<% } %>
+	</div>	
+	<% } %>
+            	
+            	
+            	<%-- end --%>
+            </div>
+            <!-- //btn_reviews_box -->
+        </div>
+    </div>

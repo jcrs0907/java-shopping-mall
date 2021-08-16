@@ -1,0 +1,88 @@
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+    pageEncoding="UTF-8"%>
+<%@page import="web.data.dto.MemberDTO"%>
+
+<%
+MemberDTO loginMember=(MemberDTO)session.getAttribute("loginMember");
+%>
+<div class="goods_price minerva">
+    <span class="price"><%=DecimalFormat.getCurrencyInstance().format(product.getpPrice())%></span>
+</div>
+<div class="order-info">
+	<span>수량 </span>
+	<input id="qtyInput" name="qtyInput" type="number" min="1" max="100" style="width: 70px;" onchange="calcPrice();">
+</div>
+<div class="price-Cont">
+	<span id="pricePrinter">
+		<span class="expected">예상가격</span><%=DecimalFormat.getCurrencyInstance().format(product.getpPrice())%>
+	</span>
+</div>
+
+<div class="btn_Cont">
+
+	<button type="button" class="j-order-btn" onclick="detailOrder();">
+	    <!-- 예약구매설정 -->
+	    구매하기
+	</button>
+
+	<% if(loginMember==null) { %>
+		<button type="button" class="j-cart-btn" onclick="goLogin();">
+		    장바구니 담기
+		</button>
+	<% } else { %>
+		<button type="button" class="j-cart-btn" onclick="detailCart();">
+		    <!-- 예약구매설정 -->
+		    장바구니 담기
+		</button>
+	<%} %>
+
+	
+<!-- 품절설정 -->
+</div>
+
+<script type="text/javascript">
+	function calcPrice(){
+		var price=<%=product.getpPrice()%>*document.getElementById("qtyInput").value;
+		document.getElementById("pricePrinter").innerHTML="<span class='expected'>예상가격</span>"+"￦"+price.toLocaleString("ko-KR", "currency");
+
+	};
+
+	function detailOrder(){
+		var qty=document.getElementById("qtyInput").value;
+		if(qty=="" || qty<=0){
+			alert("제품 수량을 확인해 주세요.");
+			return;
+		}
+		
+		location.href="<%=request.getContextPath()%>/index.jsp?workgroup=order&work=order&productId=<%=pId%>&productQuantity="+qty;
+		return;
+	}
+	
+	function detailCart(){
+		var qty=document.getElementById("qtyInput").value;
+		if(qty=="" || qty<=0){
+			alert("제품 수량을 확인해 주세요.");
+			return;
+		}
+		
+		
+		<%-- location.href="<%=request.getContextPath()%>/index.jsp?workgroup=cart&work=cart_list&productId=<%=pId%>&productQuantity="+qty; --%>
+		//to-do: 로그인 여부 체크 후 로그인 되어있지 않으면 로그인 화면으로 보내기
+		location.href="<%=request.getContextPath()%>/index.jsp?workgroup=cart&work=cart_insert&productId=<%=pId%>&productQuantity="+qty;
+		return;
+	}
+	
+	function goLogin(){
+		
+		var qty=document.getElementById("qtyInput").value;
+		if(qty=="" || qty<=0){
+			alert("제품 수량을 확인해 주세요.");
+			return;
+		}
+		
+		location.href="<%=request.getContextPath()%>/index.jsp?workgroup=member&work=login";
+		
+		return;
+	}
+					
+</script>    

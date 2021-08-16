@@ -1,0 +1,20 @@
+@charset "utf-8";
+/* CSS Document */
+/**
+ * custom css 입니다. 추가적인 css 는 여기에 작성을 해주세요.
+ */
+
+
+#formFindId .form_element.radio_find_type {display:block;margin:0 auto;text-align: center;padding-bottom:10px;}
+
+.safe_number_desc {line-height:18px}
+
+.comment_address {vertical-align: top}
+.comment_address h4 {font-size:16px;padding-bottom:10px;}
+.comment_address button {padding:0px 10px;text-align: center;border:1px solid #ddd;line-height:41px;height:40px; vertical-align: top;margin-right:0px;background:#fff}
+.comment_address input {vertical-align: top}
+.comment_address input[name='giftAddressSub'] {margin:0 20px;}
+
+.comment_agree {margin-top:20px;}
+.comment_agree label {font-size:14px;font-weight: bold}
+.comment_agree p {padding:10px;border:1px solid #ddd;background:#fff;margin-top:10px;}

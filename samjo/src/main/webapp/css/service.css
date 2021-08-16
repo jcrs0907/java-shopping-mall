@@ -1,0 +1,159 @@
+@charset "utf-8";
+/* CSS Document */
+
+/* ------------- 이용약관, 개인정보 처리방침  ------------- */
+.service_tit {margin:80px 0 70px 0;}
+.service_tit h2 {color:#000;font-size:34px;font-weight:500;text-align:center;}
+.service_tit h2 .ver {margin-left:10px;color:#555;font-weight:300;font-size: 15px;}
+.service_cont{}
+
+/* 회사소개 */
+.service_cont .service_company{}
+
+
+
+/* 고객센터 메인 */
+.service_main{}
+.service_main .board_zone_list{min-height:500px;}
+.service_main_cont{float:left; position:relative; width:100%; margin:50px 0 0 0;}
+.service_main_cont:after{display:block; clear:both; content:"";}
+
+/* ------------- 공지사항,이벤트 공통 ------------- */
+.service_main_cont h3{padding:0 0 10px 0; font-size:18px; border-bottom:1px solid #999999;}
+.service_main_cont ul{margin:-1px 0 0 0; border-top:1px solid #999999;}
+.service_main_cont li{position:relative; padding:0 10px 0 0; border-bottom:1px solid #dbdbdb; line-height:1;}
+.service_main_cont li span{float:right; padding:10px 0 0 0; color:#acacac;}
+.service_main_cont li a{display:block; overflow:hidden; padding:10px 15px 9px 20px; text-overflow:ellipsis; white-space:nowrap; word-wrap:normal; 
+background:url(../../img/icon/etc/icon_board_list.png) no-repeat 7px 15px;}
+.service_main_cont li a:hover{text-decoration:underline;}
+/* 공지사항 영역 위치 */
+.service_main_notice{float:left; position:relative; width:47%;}
+/* 이벤트 영역 위치 */
+.service_main_event{float:right; position:relative; width:47%;}
+
+/* ------------- 설문조사 ------------- */
+.poll_sec{}
+.poll_sec .poll_tit{margin:0 0 20px 0; padding:0 0 10px 0; font-size:16px; border-bottom:1px solid #999999;}
+.poll_cont{}
+.poll_list_box{}
+.poll_list_box input[type="text"]{width:100%; margin:0 0 0 10px;}
+.poll_list_box textarea{width:100%; height:100px; margin:0 0 0 10px;}
+.poll_list_box + .btn_center_box{margin:20px 0 0 0;}
+/* 설문조사 제목 + 리스트 */
+.poll_list_tit{padding:10px 0 5px 0; font-size:14px;}
+.poll_list_tit strong{color:#525c6a;}
+.poll_list_cont{padding:0 0 30px 10px;}
+.poll_list_cont ul{width:100%;}
+.poll_list_cont li{width:100%; margin:10px 0 10px 0;}
+/* 설문조사 input 셋팅 */
+.poll_list_cont .form_element{display:block; padding:0 0 0 25px;}
+.poll_list_cont .form_element label{margin:0 0 0 -20px;}
+.poll_list_cont .form_element label + input[type="text"]{display:block; position:static; width:60%; margin:5px 0 0 0;}
+
+/* 설문조사 완료 */
+.poll_end_cont{padding:80px 0 0 0; text-align:center; line-height:2.8;}
+.poll_end_cont strong{display:block; font-size:28px;}
+.poll_end_cont span{display:block; font-size:16px;}
+.poll_end_cont a{font-size:14px;}
+.poll_end_cont a em,
+.poll_end_cont a em:hover{border-bottom:1px solid #333333;}
+.poll_end_cont + .btn_center_box{margin:30px 0 0 0;}
+
+/* 설문조사 결과보기 */
+.poll_info_box{margin:0 0 30px 0; padding:20px 20px 20px 20px; border:1px solid #eeeeee; background:#f8f8f8;}
+.poll_info_box dl{overflow:hidden; padding:5px 0 5px 0;}
+.poll_info_box dt{float:left; width:80px; font-weight:bold;}
+.poll_info_box dd{float:left; width:400px;}
+
+/* 설문조사 결과 제목 + 리스트 */
+.poll_result_tit{padding:5px 0 5px 0; font-size:14px;}
+.poll_result_tit strong{color:#525c6a;}
+.poll_result_cont{padding:0 0 30px 10px;}
+.poll_result_cont ul{width:100%;}
+.poll_result_cont li{display:table; width:100%; margin:15px 0 15px 0; padding:0 0 10px 0; vertical-align:middle; border-bottom:1px solid #eeeeee;}
+.poll_result_cont .poll_result_view{padding:10px 10px 10px 10px; border:1px solid #cecece; box-sizing:border-box; word-break:break-all;}
+
+.poll_result_txt{display:block; width:auto; padding:0 10px 0 0;}
+.poll_stick{display:inline-block; width:400px; height:15px; margin:10px 0 0 0; background:#f9f9f9;}
+.poll_stick em{display:inline-table; height:15px; background:#323437;}
+.poll_percent{display:inline-block; padding:0 0 0 15px; vertical-align:middle;}
+
+/* ------------- FAQ ------------- */
+/* 게시판 기본 */
+.board_zone_sec{position:relative;}
+.board_zone_tit{margin:0 0 10px 0; padding:0 0 10px 0; font-size:16px;}
+.board_zone_cont{}
+.board_list_table{width:100%; margin:0 0 20px 0; border:0; border-spacing:0; border-collapse:collapse; border-top:1px solid #3c3c3c; text-align:center;}
+.board_list_table th{padding:10px 10px 10px 14px; border-bottom:1px solid #dbdbdb; background:#fbfbfb;}
+.board_list_table td{padding:13px 10px 15px 10px; border-bottom:1px solid #dbdbdb;}
+/* 게시판 이미지 */
+.board_list_table .board_img{overflow:hidden; position:relative; text-align:center; border:1px solid #ebebeb;}
+.board_list_table .board_img a{display:table-cell; height:100%; vertical-align:middle;}
+/* 게시판 제목 */
+.board_list_table .board_tit{text-align:left; vertical-align:middle;}
+.board_list_table .board_tit strong{font-weight:normal;}
+.board_list_table .board_tit strong > span{color:#525c6a;}
+.board_list_table .board_tit.on strong{font-weight:bold;}
+.board_list_table .board_tit img{margin:0 2px 0 2px; vertical-align:middle;}
+.board_list_table .board_tit strong:hover{text-decoration:underline;}
+/* 게시판 제목 답글 */
+.board_list_table .board_tit .reply{}
+.board_list_table .board_tit .reply{margin:0 0 0 15px; padding:0 0 0 20px; background:url(../../img/icon/board/icon_comment_reply.png) no-repeat 8px 4px;}
+
+
+
+/* 자주묻는 질문 검색 */
+.date_check_box{width:1140px;margin:10px auto 76px;}
+.date_check_box:after{display:block; clear:both; content:"";}
+.date_check_box .date_faq_list{float:right;width:305px;border-bottom:1px solid #dfdfdf;}
+.date_check_box input[type="text"]{width:258px;border:0;padding:0;}
+.date_check_box .btn_search{width:24px;height:35px;background:url('/data/skin/front/mime/img/imgN/btn_faq_search.png') no-repeat left top;overflow:hidden;text-indent:-9999px;}
+.faq_result{float:left;color:#999;line-height:45px;}
+.faq_result span{color:#3a3a3a;font-size:16px;}
+
+/* FAQ 질문 리스트 */
+.board_hot_list{}
+.board_hot_list ul:after{display:block; clear:both; content:"";}
+.board_hot_list ul{width:100%;height:48px;border-bottom:1px solid #3a3a3a;}
+.board_hot_list ul li{width:20%;border:1px solid #fff;border-bottom:0;float:left;text-align:center;}
+.board_hot_list ul li.on{position:relative;border:1px solid #3a3a3a;border-bottom:0;}
+.board_hot_list ul li.on:after{content:'';display:block;position:absolute;bottom:-1px;left:0;width:100%;height:1px;background:#fff}
+.board_hot_list ul li a{display:block;color:#919191;font-size:14px;line-height:46px;}
+.board_hot_list ul li.on a{color:#3a3a3a;font-weight:400;}
+
+/* FAQ 게시판 */
+.board_list_faq{width:1140px;margin:0 auto;position:relative;}
+.board_list_faq .board_hot_list{}
+.board_list_faq .board_list_table{border-top:0px;}
+.board_list_faq .board_list_table .board_tit{padding:15px 0 10px 0;border-bottom:1px solid #f0f0f0;}
+.board_list_faq .board_list_table .board_tit > span{display:block;padding:13px 30px 15px 35px;/*background:url(../../img/icon/board/icon_toggle_open.png) no-repeat right center;*/color:#3a3a3a;font-size:14px;}
+/*.board_list_faq .board_list_table .board_tit.on a{background:url(../../img/icon/board/icon_toggle_close.png) no-repeat right center;}*/
+.board_faq{text-align:left; background:#f8f8f8;padding:30px 30px 30px 35px !important;}
+.board_faq_cont{position:relative; min-height:70px;color:#757575;font-size:13px;line-height:24px;}
+
+
+
+
+
+.privacyStyle {max-width:960px;margin:0 auto;}
+/*.privacyStyle h4:first-of-type{margin-top:0;}*/
+.privacyStyle h4{margin:50px 0 0 0;color:#1e0602;font-size:14px;font-weight:700;line-height:30px;}
+.privacyStyle h5{color:#1e0602;font-size:14px;font-weight:700;line-height:30px;}
+.privacyStyle .txt01{margin:5px 0 0 0;color:#555;font-size:13px;line-height:20px;}
+.privacyStyle .title_p {margin:50px 0 0 0;color:#1e0602;font-size:14px;font-weight:700;line-height:30px;}
+.privacyStyle .circle{margin:5px 0 0 0;}
+.privacyStyle .dash{margin:5px 0 0 0;}
+.privacyStyle .no{margin:5px 0 0 0;}
+.privacyStyle .circle .no{margin:0 0 10px 0;}
+.privacyStyle .circle > li{color:#666;font-size:13px;line-height:20px;margin:0 0 0 17px;text-indent:-17px;}
+.privacyStyle .no > li{color:#666;font-size:13px;line-height:20px;margin:0 0 0 15px;text-indent:-15px;}
+.privacyStyle .dash > li ol{padding-left:17px}
+.privacyStyle table{width:100%;table-layout:fixed;border-top:1px solid #ddd;table-layout:fixed;empty-cells:show;border-spacing:0;margin-top:10px;}
+.privacyStyle table th{padding:10px 0 12px;background:#f8f8f8;border-bottom:1px solid #ddd;border-right:1px solid #ddd;text-indent:0;text-align:center;}
+.privacyStyle table th:last-of-type,
+.privacyStyle table td:last-of-type{border-right:0;}
+.privacyStyle table td{padding:10px 10px 12px;border-bottom:1px solid #ddd;border-right:1px solid #ddd;text-indent:0;vertical-align:top;}
+.privacyStyle table .space01 td{padding-left:150px;}
+
+.privacyStyle .circle2 {margin:0 0 10px 0;}
+.privacyStyle .circle2 table{margin:10px 0 40px;}
